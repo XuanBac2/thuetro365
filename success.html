@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tìm Trọ 365 </title>
+    <link rel="icon"type="image/png" href="timtrotainha.png">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        #countdown {
+            font-size: 36px; /* Kích thước chữ */
+            font-family: 'Arial', sans-serif; /* Phông chữ */
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+            color: #fefefe;
+        }
+    </style>
+    <script>
+        // Đặt thời gian cần đếm ngược (đơn vị: miligiây)
+        var countDownDate = new Date().getTime() + 10000; // Đếm ngược từ ngày hiện tại đến 5 giây sau.
+
+        var x = setInterval(function() {
+            // Lấy thời gian hiện tại
+            var now = new Date().getTime();
+
+            // Tính thời gian còn lại
+            var distance = countDownDate - now;
+
+            // Tính toán thời gian còn lại theo giây
+            var seconds = Math.floor(distance / 1000);
+
+            // Hiển thị thời gian còn lại
+            document.getElementById("countdown").innerHTML = seconds + "s";
+
+            // Kiểm tra nếu thời gian kết thúc
+            if (distance < 0) {
+                clearInterval(x); // Dừng đồng hồ đếm ngược khi hết thời gian
+                window.location.href = 'index.html';
+            }
+        }, 1000); // Cập nhật đồng hồ mỗi giây
+    </script>
+
+  </head>
+  <body>
+    <img class="clouds" src="123.jpeg" />
+    <div class="signup">
+
+      <h2>Đăng Ký Thành Công </h2>
+
+      <br>
+      <h4 style="color:#fefefe" >Trang sẽ tự động quay về đăng nhập sau:</h4>
+      <div id="countdown">10s</div>
+      
+      
+      
+      <br>
+
+
+
+
+      <form class="form">
+        
+        <button type="submit">
+         <a href="index.html"> Quay Về Đăng Nhập </a>
+          <span class="material-symbols-outlined"> arrow_forward </span>
+        </button><br>
+       
+      </form>`
+    </div>
+  </body>
+</html>
