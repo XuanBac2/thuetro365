@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Tìm Trọ 365 </title>
+    <link rel="icon"type="image/png" href="timtrotainha.png">
+    <link rel="stylesheet" href="styles3.css" />
+  </head>
+<body>
+    <h1>Tìm Trọ 365</h1>
+    <br>
+    <div id="search-container">
+      <input type="text" id="search-input" placeholder="Nhập từ khóa...">
+      <button onclick="performSearch()">Tìm kiếm</button>
+  </div>
+
+  <script>
+      function performSearch() {
+          // Lấy giá trị từ ô nhập liệu tìm kiếm
+          var searchTerm = document.getElementById("search-input").value;
+
+          // Bạn có thể thực hiện các hành động tìm kiếm ở đây, ví dụ: redirect đến trang kết quả
+          // window.location.href = "https://www.example.com/search?q=" + searchTerm;
+
+          // Hoặc hiển thị kết quả trên trang web
+          alert("Đang tìm kiếm với từ khóa: " + searchTerm);
+      }
+    
+  </script>
+    <nav>
+      <a class="item">Trang Chủ</a>
+      <div class="item">
+        Khu Vực
+        <div class="dropdown">
+          <div>
+            <a>Quận Bắc Từ Liêm</a>
+            <a>Quận Nam Từ Liêm</a>
+            <a>Quận Tây Hồ</a>
+          </div>
+        </div>
+      </div>
+      <a class="item">Tìm Người Ở Ghép</a>
+      <a class="item">Nhà cho Thuê</a>
+      <div class="underline"></div>
+    </nav>
+
+<div class="flex-comtainer-card">
+ <div class="card">
+   <div class="card-img-shadow"><img scr="#" alt ="wanda"></div>
+   <div class="card-content">
+    <h2>Scalet Witch</h2>
+    <p>dshafjbvlasd</p>
+    <div class="button-shadow">
+      <div class="card-button">View more</div>
+    </div>
+   </div>
+ </div>
+</div>
+
+<div class="card">
+  <div class="card-img-shadow"><img scr="#" alt="natasha"></div>
+</div>
+<div class="card-content">
+  <h2>Black Ưindow</h2>
+</div>
+</body>
+   
