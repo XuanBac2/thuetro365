@@ -6,6 +6,19 @@
     <title>Tìm Trọ 365 </title>
     <link rel="icon"type="image/png" href="timtrotainha.png">
     <link rel="stylesheet" href="styles3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 <body>
     <h1>Tìm Trọ 365</h1>
@@ -14,6 +27,38 @@
       <input type="text" id="search-input" placeholder="Nhập từ khóa...">
       <button onclick="performSearch()">Tìm kiếm</button>
   </div>
+  <!-- Thanh tìm kiếm và logo -->
+
+
+
+  <div class="timtro"></div>
+  <button class="timtro1" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+    <i class="fa-solid fa-close"></i>
+  </button>
+  <aside>
+    <a>Home</a>
+    <a>Install</a>
+    <a>Blog</a>
+    <h3>Product</h3>
+    <a>Why SurrealDB?</a>
+    <a>Features</a>
+    <a>Releases</a>
+    <a>Roadmap</a>
+    <a>Documentation</a>
+    <button>Join cloud waitlist</button>
+  </aside>
+
+
+   
+
+  <script type="text/javascript">
+    const toggleMenu = () => document.body.classList.toggle("open");
+  </script>
+  <!-- giao diện menu -->
+
+
+
 
   <script>
       function performSearch() {
@@ -45,24 +90,114 @@
       <div class="underline"></div>
     </nav>
 
-<div class="flex-comtainer-card">
- <div class="card">
-   <div class="card-img-shadow"><img scr="#" alt ="wanda"></div>
-   <div class="card-content">
-    <h2>Scalet Witch</h2>
-    <p>dshafjbvlasd</p>
-    <div class="button-shadow">
-      <div class="card-button">View more</div>
-    </div>
-   </div>
- </div>
-</div>
+    <br>
 
-<div class="card">
-  <div class="card-img-shadow"><img scr="#" alt="natasha"></div>
-</div>
-<div class="card-content">
-  <h2>Black Ưindow</h2>
-</div>
-</body>
+    <div class="container">
+      <div class="products-container">
+
+        <div class="card">
+
+          <div class="img_container">
+      
+            <img src="ảnh nhà trọ/394629251_692114792845502_7751328540120775680_n.jpg" alt="" />
+            <!-- hình ảnh chính -->
+      
+          </div>
+      
+          <div class="details_container">
+      
+            <p class="montserrat">Hương Đỗ</p>
+            <!-- Tên người đăng -->
+      
+            <h3 class="name"> Cho Thuê phòng : ngõ 343 ĐỘI CẤN ĐI VÀO ( ngay gần LOTTE)</h3>
+            <!-- địa chỉ cho thuê -->
+      
+            <p class="description">
+      
+             Nội thất : điều hòa , nóng lạnh , giường , tủ ….
+             Để xe Free, Camera an ninh 24/24,địa điểm trung tâm nhiều tiện ích
+             0943332377
+      
+            </p>
+            <!-- mô tả phòng -->
+      
+            <h4 class="name">Giá Cho Thuê:</h4>
+            <div class="price_container">
+           
+              <h2 class="current_price">4.000.000đ/Tháng</h2>
+      
+            </div>
+            <!-- Giá cho thuê -->
+      
+      
+            <button class="btn">
+      
+              <img src="./images/icon-cart.svg" alt="" />
+      
+              Xem Thêm
+      
+            </button>
+            <!-- Xem Thêm thông tin -->
+           
+          </div>
+
+
+
+          <div class="card">
+
+            <div class="img_container">
+        
+              <img src="ảnh nhà trọ/394629251_692114792845502_7751328540120775680_n.jpg" alt="" />
+              <!-- hình ảnh chính -->
+        
+            </div>
+        
+            <div class="details_container">
+        
+              <p class="montserrat">Hương Đỗ</p>
+              <!-- Tên người đăng -->
+        
+              <h3 class="name"> Cho Thuê phòng : ngõ 343 ĐỘI CẤN ĐI VÀO ( ngay gần LOTTE)</h3>
+              <!-- địa chỉ cho thuê -->
+        
+              <p class="description">
+        
+               Nội thất : điều hòa , nóng lạnh , giường , tủ ….
+               Để xe Free, Camera an ninh 24/24,địa điểm trung tâm nhiều tiện ích
+               0943332377
+        
+              </p>
+              <!-- mô tả phòng -->
+        
+              <h4 class="name">Giá Cho Thuê:</h4>
+              <div class="price_container">
+             
+                <h2 class="current_price">4.000.000đ/Tháng</h2>
+        
+              </div>
+              <!-- Giá cho thuê -->
+        
+        
+              <button class="btn">
+        
+                <img src="./images/icon-cart.svg" alt="" />
+        
+                Xem Thêm
+        
+              </button>
+              <!-- Xem Thêm thông tin -->
+             
+            </div>
+
+
+
+          
+      </div>
+    </div>
+  
+
+
+    
+
+
    
