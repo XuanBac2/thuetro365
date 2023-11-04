@@ -10,7 +10,7 @@
 
 body {
   font-family: "Euclid Circular A", "Poppins";
-  background: #12161f;
+  background: #5d5c5c;
   color: white;
   margin: 0;
   height: 20vh;
@@ -107,65 +107,395 @@ nav .item:nth-child(4):hover ~ .underline {
   font-family: "lost", sans-senrif;
 }
 
-body{
-  padding: 60px 20px;
-  color: rgb(211,211, 211);
-  background: #100034;
+
+/* Phần thẻ cho thuê */
+
+.container{
+  max-width: 1000px;
+  margin:0 auto;
+  padding:3rem 2rem;
 }
 
-p{
-  margin: 10px 0px;
-  letter-spacing: 2px;
+.container .products-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:2rem;
 }
 
-.flex-container-cards {
-  filter: drop-shadow(rgb(255, 100, 0) 0px 0px 1px);
+.card {
+  border-radius: 5px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  max-width: 3000px;
+  background-color: white;
+  margin: 0 1rem;
+}
+
+.img_container {
+  width: 50%;
+}
+
+.img_container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.details_container {
+  width: 50%;
+  padding: 2rem;
+}
+
+.details_container .name {
+  color: hsl(212, 21%, 14%);
+  padding-right: 2rem;
+  margin-bottom: 1.75rem;
+}
+
+.details_container .description {
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  line-height: 22px;
+  margin-bottom: 1.75rem;
+}
+
+.montserrat {
+  font-family: "Montserrat";
+  letter-spacing: 3px;
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 1.75rem;
+}
+
+.price_container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.price_container .current_price {
+  color: hsl(242, 91%, 27%);
+}
+
+.price_container .old_price {
+  font-family: "Montserrat";
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+
+.details_container .btn {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: hsl(247, 96%, 42%);
+  color: white;
+  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  font-family: "Montserrat";
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.flex-container-card .card{
-  background: linear-gradient(240deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
-  width: 300px;
-  -webkit-clip-path: pat
+.details_container .btn:hover {
+  background-color: hsl(212, 21%, 14%);
 }
 
-.flex-container-card .card{
-  background: linear-gradient(240deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1)100%);
-  width: 300px;
-  -webkit-clip-path: polygon(0 0, 200px 0, 210px 10px, 290px 0, 100% 0, 100% 150px,
- 290px 160pz, 290px 300px, 100% 310px, 100% calc(100% - 30px), calc(100%  30px) 100%, 0 100%, 0
- 400px, 10px 390px, 10px 100px, 0  90px);
-          clip-path: polygon (0 0, 200px 0, 210px 10px, 280px 10px, 290px 0, 100% 0, 100% 150px,
-          290px 160px, 290px 300px, 100% 310px, 100% 310px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0
-          400px, 10px 390px, 10px 100px, 0 90px);
- transition: all 0.2s linear;
- filter: drop-shadow(rgb(255, 0, 0) 0px 0px 10px);
-}
-.flex-container-cards .card:hover {
- transform: scale(1.1);
+@media only screen and (max-width: 550px) {
+  .card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .img_container {
+    width: 100%;
+    height: 40%;
+  }
+
+  .img_container img {
+    content: url("./images/image-product-mobile.jpg");
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .details_container {
+    width: 100%;
+  }
+
+  .details_container .name {
+    padding-right: 0;
+  }
+
+  .img_container img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
 }
 
-.flex-container-cards .card .card-img-shadow {
-  filter: drop-shadow(rgb(255, 0, 0) 0px 0px 10px);
+#list-product{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}* {
+  box-sizing: border-box;
 }
 
-.flex-container-cards .card .card-img-shadow img{
+body {
+  margin: 0;
+  background: rgb(27 32 44 / 100%);
+  color: #f9f9f9;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+nav {
+  position: sticky;
+  z-index: 1;
+  top: 0;
   width: 100%;
-  height: 170px;
-  object-fit: cover;
-  margin-bottom: 30px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 30px 100%, 30px 100%, 0 calc(100% - 30px));
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 30px 100%, 30px 100%, 0 calc(100% - 30px));          
+  height: 88px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(27 32 44 / 70%);
+  -webkit-backdrop-filter: blur(5px);
+  -moz-backdrop-filter: blur(5px);
+  -ms-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  backface-visibility: hidden;
+  transform: translateZ(0px);
+  transition: 0.3s;
+  right: 0; /* Đặt menu bên phải màn hình */
 }
 
-.flex-container-cards .card .card-content {
-  margin: opx 30px;
+nav img {
+  height: 40px;
 }
-.fles-container-cards .card h2{
-  color: rgb(255, 128, 0);
-  text-align: center;
+
+.burger {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0; /* Đặt burger bên phải màn hình */
+  display: grid;
+  place-items: center;
+  padding: 0;
+  width: 82px;
+  height: 82px;
+  font-size: 30px;
+  color: #f9f9f9;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgb(27 32 44 / 70%);
+  visibility: hidden;
+  opacity: 0;
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+body.open .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+main {
+  padding: 10px 30px;
+}
+
+aside {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -260px; /* Đặt aside ở bên phải và ẩn nó khỏi màn hình */
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 100%;
+  padding: 18px 20px 20px;
+  background: #272e3c;
+  box-shadow: 0 0 20px rgb(0 0 0 / 70%);
+  transition: 0.3s;
+  right: 0; /* Hiển thị aside bên phải màn hình khi mở menu */
+}
+
+body.open aside {
+  right: -260px; /* Ẩn aside bên phải màn hình khi đóng menu */
+}
+
+aside a {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+aside h3 {
+  margin: 40px 0 10px;
+  color: #989cad;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+aside button {
+  background: linear-gradient(-60deg, #8700ff, #ff009e);
+  color: #f7f7f7;
+  border: 0;
+  height: 60px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+
+/* Giao diện menu */
+.timtro1 {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0; /* Đặt burger bên phải màn hình */
+  display: grid;
+  place-items: center;
+  padding: 0;
+  width: 82px;
+  height: 82px;
+  font-size: 30px;
+  color: #f9f9f9;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.timtro1 i:last-child {
+  display: none;
+  color: #ffffff; /* Màu trắng */
+}
+
+
+body.open .timtro1 i:first-child {
+  display: none;
+  color: #ffffff; /* Màu trắng */
+}
+
+body.open .timtro1 i:last-child {
+  display: block;
+}
+
+.timtro {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgb(27 32 44 / 70%);
+  visibility: hidden;
+  opacity: 0;
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+body.open .timtro {
+  visibility: visible;
+  opacity: 1;
+}
+
+main {
+  padding: 10px 30px;
+  flex: 1; /* Để nội dung tự động mở rộng và đổ đều chiều cao màn hình */
+}
+
+article {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto 32px;
+  border-radius: 16px;
+  background-color: #272e3c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+article img {
+  height: 60px;
+}
+
+article name {
+  color: rgb(255 255 255 / 50%);
+}
+
+article p {
+  margin: 8px 0 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+nav button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+aside {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -260px; /* Đặt aside bên phải và ẩn nó khỏi màn hình */
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 100%;
+  padding: 18px 20px 20px;
+  background: #272e3c;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+}
+
+body.open aside {
+  right: 0; /* Hiển thị aside bên phải màn hình khi mở menu */
+}
+
+aside a {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+aside h3 {
+  margin: 40px 0 10px;
+  color: #989cad;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+aside button {
+  background: linear-gradient(-60deg, #8700ff, #ff009e);
+  color: #f7f7f7;
+  border: 0;
+  height: 60px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 16px;
+  margin-top: 20px;
 }
