@@ -29,8 +29,7 @@ input {
 
 @keyframes clouds {
   100% {
-    translate: -20vw -55%;
-    scale: 1 1.1;
+    transform: translate(-20vw, -55%) scale(1, 1.1);
   }
 }
 
@@ -40,21 +39,31 @@ input {
   left: 0;
   width: 1900px;
   height: 1500px;
-  translate: 0% -25%;
+  transform: translate(0%, -25%);
   animation: clouds 20s infinite alternate linear;
 }
 
 .signup {
   position: fixed;
   z-index: 2;
-  top: 0;
-  left: 0;
-  height: 100%;
+  top: 50%; /* Đã cập nhật để căn giữa theo chiều dọc */
+  left: 50%; /* Đã cập nhật để căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%); /* Đã cập nhật để căn giữa cả chiều dọc và chiều ngang */
+  height: 70%; /* Điều chỉnh chiều cao nếu cần thiết */
   width: 70%;
   max-width: 460px;
-  padding: 200px 90px;
+  padding: 40px; /* Điều chỉnh độ lề nếu cần thiết */
   background: #111820;
 }
+
+.signup > h5 {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 0 6px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
 
 .signup > h5 {
   font-size: 15px;
